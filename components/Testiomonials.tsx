@@ -31,7 +31,10 @@ const Testiomonials = () => {
       </div>
       <div className="grid grid-cols-3 gap-8 my-6">
         {testimonials.map((testimonial) => (
-          <div className="border-[1px] border-[#00000044] rounded-2xl p-4">
+          <div
+            className="border-[1px] border-[#00000044] rounded-2xl p-4"
+            key={testimonial.text}
+          >
             <p className="text-gray-600 font-light">{testimonial.text}</p>
             <div className="flex justify-between items-center">
               <span className="my-1.5 font-semibold text-[#464646]">

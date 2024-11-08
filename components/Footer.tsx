@@ -63,7 +63,12 @@ const Footer = () => {
           </h1>
           <div className="grid grid-cols-6 place-items-center gap-2">
             {media.map((img) => (
-              <img src={img.img} alt={img.name} className="h-16" />
+              <img
+                key={img.name}
+                src={img.img}
+                alt={img.name}
+                className="h-16"
+              />
             ))}
           </div>
           <img

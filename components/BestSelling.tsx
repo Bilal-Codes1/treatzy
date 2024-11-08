@@ -80,7 +80,10 @@ const BestSelling = () => {
       </div>
       <div className="my-6 grid grid-cols-4 gap-4">
         {items.map((item) => (
-          <div className="border-[1px] pb-4 transition-all duration-200 ease-in-out border-[#00000044] rounded-2xl cursor-pointer relative group">
+          <div
+            className="border-[1px] pb-4 transition-all duration-200 ease-in-out border-[#00000044] rounded-2xl cursor-pointer relative group"
+            key={item.name}
+          >
             <div className="overflow-hidden rounded-t-2xl">
               <img
                 src={item.img}
