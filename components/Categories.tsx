@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { AiOutlineEdit } from "react-icons/ai";
-
 const Categories = () => {
   const circles = [
     {
