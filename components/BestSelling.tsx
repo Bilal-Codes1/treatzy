@@ -63,22 +63,23 @@ const BestSelling = () => {
       delivery: "in 2-3 days",
     },
   ];
+
   return (
-    <div className="px-16">
+    <div className="px-4 md:px-8 lg:px-16">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-semibold">
+          <h1 className="md:text-2xl text-lg font-semibold">
             Best Selling Flowers & Gifts
           </h1>
           <span className="text-lg font-light text-[#888]">
             Surprise Your Loved Ones
           </span>
         </div>
-        <div className="text-lg px-8 py-2 bg-[#0e4d65] text-white rounded-md cursor-pointer">
+        <div className="md:text-lg text-md md:px-8 md:py-2 px-4 py-1.5 bg-[#0e4d65] text-white rounded-md cursor-pointer">
           View All
         </div>
       </div>
-      <div className="my-6 grid grid-cols-4 gap-4">
+      <div className="my-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {items.map((item) => (
           <div
             className="border-[1px] pb-4 transition-all duration-200 ease-in-out border-[#00000044] rounded-2xl cursor-pointer relative group"
@@ -97,9 +98,11 @@ const BestSelling = () => {
             <p className="text-[#0f0f0f] text-md my-2 mx-2">{item.price}</p>
             <div className="flex items-center">
               <div
-                className={`${item.rating === 5 ? "gap-2" : "gap-1"} ${
+                className={`${
+                  item.rating === 5 ? "md:gap-2 gap-2" : "md:gap-1 gap-2"
+                } ${
                   item.rating ? "" : "invisible"
-                } flex justify-center items-center px-1 w-[17%] my-1 bg-[#4caf50] mx-2 rounded-md`}
+                } flex justify-center items-center px-1 md:w-[17%] w-[25%] my-1 bg-[#4caf50] mx-2 rounded-md`}
               >
                 <FaStar className="text-white text-sm" />
                 <span className="text-white text-sm">{item.rating}</span>

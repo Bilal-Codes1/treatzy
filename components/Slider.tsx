@@ -27,30 +27,72 @@ const Slider = () => {
     },
   ];
 
+  const mbanners = [
+    {
+      name: "mbanner1",
+      img: "/mbanner1.jpg",
+    },
+    {
+      name: "mbanner2",
+      img: "/mbanner2.jpg",
+    },
+    {
+      name: "mbanner3",
+      img: "/mbanner3.jpg",
+    },
+    {
+      name: "mbanner4",
+      img: "/mbanner4.jpg",
+    },
+  ];
+
   return (
     <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-          el: ".custom-pagination",
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper w-[90%] rounded-2xl my-6"
-      >
-        {banners.map((banner) => (
-          <SwiperSlide key={banner.name}>
-            <img src={banner.img} alt={banner.name} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="custom-pagination mt-4"></div>
+      <div className="hidden md:block">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper w-[90%] rounded-2xl my-6"
+        >
+          {banners.map((banner) => (
+            <SwiperSlide key={banner.name}>
+              <img src={banner.img} alt={banner.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="md:hidden">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper w-[90%] rounded-2xl my-6"
+        >
+          {mbanners.map((banner) => (
+            <SwiperSlide key={banner.name}>
+              <img src={banner.img} alt={banner.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 };
+
 export default Slider;

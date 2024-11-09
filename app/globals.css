@@ -5,6 +5,11 @@
 
 body {
   font-family: 'Outfit', sans-serif;
+  min-width: 100%;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .custom-pagination {
